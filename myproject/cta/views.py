@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 # Load variables from .env file
 load_dotenv()
 
-# BAD PRACTICE: hardcoding API key directly instead of using environment variables
-CTA_API_KEY = "524e55641a6c4655a2378d3644ca06f3"
+# get api key from my .env file containing my api key
+CTA_API_KEY = os.getenv("CTA_KEY_TRAIN")
 
 def get_cta_trains(request):
     """
